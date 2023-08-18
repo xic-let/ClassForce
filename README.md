@@ -8,7 +8,7 @@
  
 <h2> *Drawer menus</h2>
 
- ![img3](img3.jpg)
+ ![img3](img3.png)
  
  ![img4](img4.png)
 <h2> *SplashScreen</h2>
@@ -21,5 +21,5 @@
 
 <h2> *DataBase management with Room</h2>
 
- ![img6](img6.jpg)
+ ![img6](img6.png)
 
