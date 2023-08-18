@@ -1,0 +1,118 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation">
+
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/nav_drawer_menu">
+
+
+        <fragment
+            android:id="@+id/nav_drawer_menu"
+            android:name="com.example.classforce.data.fragments.NavDrawerMenuFragment"
+            android:label="Menu"
+            tools:layout="@layout/fragment_nav_drawer_menu">
+
+
+        </fragment>
+
+    </navigation>
+
+    <fragment
+        android:id="@+id/nav_cursos"
+        tools:layout="@layout/fragment_curso_details"
+        android:name="com.example.classforce.data.fragments.CursoListFragment"
+        android:label="Cursos">
+
+    <action
+        android:id="@+id/menu_to_nav_cursos"
+        app:destination="@id/fragment_curso_details"/>
+
+        <action
+        android:id="@+id/action_nav_cursos_to_nav_users"
+        app:destination="@id/nav_users" />
+
+    <action
+        android:id="@+id/action_nav_cursos_to_nav_gescursos"
+        app:destination="@id/nav_gescursos" />
+
+    <action
+        android:id="@+id/action_nav_cursos_to_nav_about"
+        app:destination="@id/nav_about" />
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_users"
+        tools:layout="@layout/fragment_user"
+        android:name="com.example.classforce.data.fragments.UserFragment"
+        android:label="Gestão de Utilizadores" >
+
+        <action
+            android:id="@+id/menu_to_nav_users"
+            app:destination="@id/nav_users" />
+
+    <action
+        android:id="@+id/action_nav_users_to_nav_cursos"
+        app:destination="@id/nav_cursos" />
+    <action
+        android:id="@+id/action_nav_users_to_nav_gescursos"
+        app:destination="@id/nav_gescursos" />
+    <action
+        android:id="@+id/action_nav_users_to_nav_about"
+        app:destination="@id/nav_about" />
+
+
+    </fragment>
+
+
+    <fragment android:id="@+id/nav_gescursos"
+        tools:layout="@layout/fragment_curso"
+        android:name="com.example.classforce.data.fragments.CursoFragment"
+        android:label="Gestão de Cursos" >
+
+        <action
+            android:id="@+id/action_nav_cursos_to_curso_details"
+            app:destination="@id/fragment_curso_details" />
+
+    <action
+        android:id="@+id/action_nav_gescursos_to_nav_users"
+        app:destination="@id/nav_users" />
+    <action
+        android:id="@+id/menu_to_nav_gescursos"
+        app:destination="@id/nav_gescursos" />
+    <action
+        android:id="@+id/action_nav_gescursos_to_nav_about"
+        app:destination="@id/nav_about" />
+
+
+
+    </fragment>
+
+    <fragment android:id="@+id/nav_about"
+        tools:layout="@layout/fragment_about"
+        android:name="com.example.classforce.data.fragments.AboutFragment"
+        android:label="About and beyond" >
+
+        <action
+            android:id="@+id/menu_to_nav_about"
+            app:destination="@id/nav_about" />
+
+        <action
+            android:id="@+id/action_nav_about_to_nav_users"
+            app:destination="@id/nav_users" />
+        <action
+            android:id="@+id/action_nav_about_to_nav_gescursos"
+            app:destination="@id/nav_gescursos" />
+        <action
+            android:id="@+id/action_nav_about_to_nav_cursos"
+            app:destination="@id/nav_cursos" />
+
+
+    </fragment>
+
+
+</navigation>

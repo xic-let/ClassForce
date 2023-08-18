@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ClassForce</string>
+    <string name="username" />
+    <string name="password" />
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="choose_image_button_text">Carregar Imagem</string>
+    <string name="choose_image_button_hint">Carregar imagem</string>
+
+</resources>
